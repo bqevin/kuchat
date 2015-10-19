@@ -1,0 +1,56 @@
+
+
+<head>
+
+  <title>Open Chatroom</title>
+
+</head>
+
+ 
+
+<body>
+
+ <div class="container">
+
+    <header>
+
+      <h1>Open Chatroom</h1>
+
+      <form class="new-chat">
+
+        <input type="text" name="text" placeholder="Start typing to chat..." />
+
+      </form>
+
+    </header>
+
+ 
+
+    <ul>
+
+      {{#each chats}}
+
+        {{> chat}}
+
+      {{/each}}
+
+    </ul>
+
+  </div>
+
+</body>
+
+ 
+
+<template name="chat">
+  <li class="{{#if checked}}checked{{/if}}">
+
+    <button class="delete">&times;</button>
+
+    <!-- <input type="checkbox" checked="{{checked}}" class="toggle-checked" /> -->
+
+    <span class="text"><strong>Guest:</strong> {{text}} </span>
+  </li>
+
+</template>
+
